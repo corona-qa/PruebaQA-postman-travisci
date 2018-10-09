@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e50e4ebc-8e5e-4050-bd59-747684e20b7c",
+						"id": "15b1d542-f53a-46b8-9b3f-0d7dd92cb23e",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Response time is less than 100ms\", function () {",
@@ -24,7 +24,12 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							""
+							"",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Raigeki\");",
+							"});"
 						]
 					}
 				}
@@ -58,7 +63,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a42b7a15-68f2-48f5-9393-67cde5e4d0f7",
+						"id": "e10e1e26-bed3-421e-9dd9-2bb431d97dd8",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Response time is less than 100ms\", function () {",
@@ -71,7 +76,11 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							""
+							"",
+							"",
+							"pm.test(\"Body is correct\", function () {",
+							"    pm.response.to.have.body(\"Rare\");",
+							"});"
 						]
 					}
 				}
